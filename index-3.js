@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
       respuesta += 'Bienvenido a la habitación para huéspedes';
       break;
     default:
-      res.statusCode = 500;
+      res.statusCode = 404;
       respuesta += 'epa';
   }
 

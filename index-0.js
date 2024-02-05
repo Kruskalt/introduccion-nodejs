@@ -9,7 +9,7 @@ const PUERTO = 8080;
 
 const server = http.createServer((req, res) => {
   res.writeHead(200);
-  res.end('Hola, mundo!');
+  res.end('Hola, mundo!chau');
 });
 
 console.log(`escuchando en el puerto ${PUERTO}`);

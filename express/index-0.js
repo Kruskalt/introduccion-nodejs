@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 // matchea /patricio, /mauricio, y otros nombres con los que alguna vez confundieron el mío
-app.get(/\/[a-z]{3}ricio$/, (req, res, next) => { // notar el 3er parámetro `next`
+app.get(/\/[a-z]{3}ricio$/, (req, res, next) => { // notar el 3er parámetro `next`    , {3}exactamente 3 letras
   res.write('Hola');
   next('este es un parámetro que se le pasa a la siguiente función');
 }, (a, req, res, next) => {
