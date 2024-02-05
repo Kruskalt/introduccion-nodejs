@@ -1,0 +1,119 @@
+nota:me hubiese convenido hacer una clase movimiento, que tenga nombre, costo de energia y descripcion.
+
+jsdoc es para documentar el codigo de js..
+es para un ayudamemoria por el tema de que js no es fuertemente tipado..
+@param {number}
+
+
+*****************************
+ciclo de vida del desarrollo*
+*****************************
+
+-obtener y analizar requerimientos.
+-diseño, por ejemplo los diagramas. para explicar como funcionara la app
+-implementacion
+-testing o verificacion
+-deploy
+-mantenimiento
+
+************************
+metodologias de trabajo*
+************************
+
+Waterfall
++es ir paso por paso y en orden como se listo antes.
+-no esta adaptado al mercado.
+-cambiar cosas una vez esta hecho el proyecto es muy dificil.
+
+
+Espiral
++vamos a hacer funcionalidad de a poco y mostrandote lo mas importante
+y recibiendo un feedback del cliente, es un proceso iterativo que disminuye los riesgos
++es flexible, permite cambiar sobre la marcha
++es el mas usado hoy en dia
+ 
+
+diferencias-
+waterfall mostras resultados recien al final del proyecto, es un riesgo alto
+en espiral en cada iteracion vamos entregando algo y mostrando trabajo, lo que el riesgo cada vez es mas bajo
+
+agil no es mas rapido, sino que entregamos valor antes.
+agil es poder cambiar de meta mas facil.
+
+
+SCRUM Y KANBAN SON METODOLOGIAS AGILE BASADAS EN ESPIRAL
+
+
+
+en scrum tenemos un PO, Scrum master, el equipo de trabajo(diseñadores, analistas)
+se trata de completar las iteraciones.
+
+
+kanban es distinto, se tiene listas con items, haciendo,por hacer..
+
+
+
+
+*******
+DISEÑO*
+*******
+profesionalmente nesecito aprender a que mi codigo sea entendible y modificable...
+que mi codigo sea mantenible..por mi o otros devs
+
+es crucial no reinventar la rueda para crear soluciones, para esto existen patrones de diseño que deberiamos usar
+por ejemplo singleton o observer,maper tambien es uno (el que use en mapeadores).
+
+
+"ENTENDER EL NEGOCIO"
+
+
+
+
+abstraccion= por ejemplo decir php,java,js y decir bueno lenguajes de programacion o pensar en una clase jugador y si es de futbol,basket,volley, 
+no importa que deporte practica por que es un jugador y tiene sus atributos ahi en jugador, es abstraerse de esas cosas.
+
+
+modularizacion: agrupar clases por modulo. segun funcionalidad parecida.
+
+
+webapi forma de interactuar con sistemas remotos, servicios.
+
+
+
+******
+SOLID*
+******
+
+
+SINGLE RESPOSANBILITY PRINCIPLE-
+es el principio de responsabilidad unica, una clase o un modulo solo deberia tener una razon para ser modificado.
+
+ej: el modulo de pagos solo deberia cambiar si hay un cambio en las condiciones de pago, no si cambiamos de proveedr de e-mail,
+que corresponde al modulo de mensajeria. 
+
+OPEN-CLOSED PRINCIPLE-
+Las clases,modulos y funciones deberian estar abiertas para extension pero cerrados para modificacion.
+ej: ejemplo una funcion enviarMensaje con wasap y despues quiera cambiarlo por telegram y no reciba los mismo parametros y tenga que modificar la funcion. Esto es un problema.
+para cumplir con el principio, deberia pedir el proveedor, el mensaje y el numero... antes todo estaba hardcodeado dentro de la funcion.
+
+LISKOV PRINCIPLE-
+Tiene que ver con polimorfismo.
+un objeto deberia ser reemplazable por cualquiera de sus subtipos y no deberia crear un problema en el programa.
+
+
+INTERFACE SEGREGATION-
+Muchas interfaces especificas son mejor que una interfaz general.
+ningun cliente deberia ser forzado a depender de metodos que no usa.
+
+ej: una clase transporte  toma la cantidad de ruedas y la cantidad de alas, y metodos volar y andar.
+pero cuando yo cree un auto que extienda a transporte , en el constructor voy a tener que pasarle la cantidad de alas que tiene el auto.
+y cuando llame a la funcion volar voy a tener que tirar un error.
+me veo forzado a escribir codigo por que diseñe mal la aplicacion.
+
+
+la solucion seria crear interfaces terrestre y aereo que extiendan de la interfaz transporte.
+
+
+DEPENDECY INVERSION-
+Invertir las dependecias de los modulos y los modulos de alto nivel no deberian depender de modulos de bajo nivel.
+deberian depender de abstracciones.

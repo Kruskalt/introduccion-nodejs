@@ -1,0 +1,108 @@
+INTRODUCCION A NODE JS******
+****************************
+
+AMBIENTES DE EJECUCION-
+
+Node es del lado del servidor...nos permite ejecutar js en el servidor. tambien se puede levantar un servidor web
+
+el otro que tenemos es por browser
+
+usaremos ESM incluso en lado del servidor, en node, con babel.
+
+
+CODIGO ISOMORFICOS= cuando el codigo puede correr en ambos ambientes
+
+herramientas:
+
+postman
+nodemon  (verifica cambios en archivos y relanza el servidor)
+eslint(ya tengo)
+jest(ya tengo)
+
+
+web api = ofrecen funcionalidad mediante endpoints, url. siguen el protocolo http
+
+
+¨**los modulos tambien son apis que ofrecen funcionalidad
+
+
+path es /curso/clases   ... por ejemplo asi
+
+
+
+
+estructura de request y response de http 
+-header encabezado donde esta la info de la request
+-body datos que le pasamos al servidor de lo que queremos que haga
+-codigos de estado 2xx bien, 4xx error user, 5xx error del servidor
+
+npm run dev --paso=0
+
+
+curl http://localhost:8080 ...  es para recibir una respuesta de una url
+
+
+
+server.listen() solo este programa puede escuchar en el puerto... es lo que ya sabia por la uni
+
+
+
+
+
+
+index-1.js devuelve un html...
+
+ { 'Content-Type': 'text/html' } para ayudar al navegador a que sepa cual es el contenido de la reespuesta.
+
+*las aplicaciones se guian por lo que contiene el header..
+
+
+
+
+index-2.js incluye la libreria core url
+el parse que usa aca es para convertir la url (que esta en string) en un objeto json que nos separa las distintas partes de la url.
+ res.end() es como un return. termina ahi
+
+res.write escribe y podes seguir editando.
+
+
+46
+
+
+
+index-3.js devolver un error un 404
+
+res.setheader es para setear un header en memoria pero sin enviarlo. por que los writeheader deben suceder antes de dar una respuesta.
+y esta es la forma que se hace para solucionarlo.
+
+
+
+
+*********
+*EXPRESS*
+*********
+
+Es un framework para no tener que hacer todo lo que vimos en los pasos anteriores para configurar el server
+
+
+
+como usarlo? app.el metodo http que nesecitemos (get,post,put..)
+hay que pasarle que ruta , y que queremos que ejecute cuando vayan a esa ruta.
+
+
+parametro next, para concatenar funciones de callback
+
+
+
+
+*PUNTO INFLEXIVO DEL BACKEND = COMO MANIPULAR PARAMETROS.
+esto se ve en la hora de video.
+
+req.param('x') pide por un valor del parametro x en la url , sí la hay.
+
+param ya no se usa, ahora se usa params que es una variable....
+
+
+
+
+1h5min
